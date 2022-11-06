@@ -29,7 +29,16 @@ function generatePassword() {
       passwordOptions.push(letter)
     })
   };
-  console.log(passwordOptions)
+  if(wantsNumbers ===  true) {
+    letters.forEach(function(number){
+      passwordOptions.push(number)
+    })
+  };
+  if(wantsSpecialcharacters ===  true) {
+    letters.forEach(function(character){
+      passwordOptions.push(character)
+    })
+  };
 }
 
 // Write password to the #password input
